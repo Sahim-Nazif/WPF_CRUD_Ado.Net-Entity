@@ -9,9 +9,9 @@
     <Grid>
         <Label Content="Latest Movies" HorizontalAlignment="Center" Margin="104,33" FontSize="18" FontWeight="Bold"></Label>
         <Label Content="Title" HorizontalAlignment="Left" Margin="20,100" FontSize="14"></Label>
-        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="120,-140,0,0" TextWrapping="Wrap" Height="30" Width="200"></TextBox>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="120,-140,0,0" TextWrapping="Wrap" Height="30" Width="200" />
         <Label Content="Rlease Date" HorizontalAlignment="Left" Margin="20,150" FontSize="14"></Label>
-        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Margin="120,-40,0,0" TextWrapping="Wrap" Height="30" Width="200"></TextBox>
+        <DatePicker x:Name="txtDate" HorizontalAlignment="Left" Margin="120,-40,0,0"  Height="30" Width="200"></DatePicker>
         <Label Content="Genre" HorizontalAlignment="Left" Margin="20,200,10,12" FontSize="14"></Label>
         <ComboBox Name="genreCombox" HorizontalAlignment="Left" Margin="120,60,0,0" Height="30" Width="200">
             <ComboBox.Items>
@@ -22,7 +22,7 @@
                 <ComboBoxItem>Thriller</ComboBoxItem>
             </ComboBox.Items>
         </ComboBox>
-        <Button Content="Update Movie" Name="btnUpdateMovie" HorizontalAlignment="Left" Height="30" Width="100" Margin="160,180,0,0"></Button>
+        <Button Content="Update Movie" Name="btnUpdateMovie" HorizontalAlignment="Left" Height="30" Width="100" Margin="160,180,0,0" Click="btnUpdateMovie_Click"></Button>
 
     </Grid>
 </Window>

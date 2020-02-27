@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="700">
     <DockPanel>
-        <DataGrid x:Name="Myusers" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*">
+        <DataGrid x:Name="MyMovies" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
                 <DataGridTextColumn Header="Release Date" Binding="{Binding Release_date}"/>
@@ -22,9 +22,9 @@
                         <DataTemplate>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button x:Name="addBtn" Content="Add"/>
-                                    <Button x:Name="updateBtn" Content="Update"/>
-                                    <Button x:Name="deleteBtn" Content="Delete"/>
+                                    <Button x:Name="addBtn" Content="Add" Click="addBtn"/>
+                                    <Button x:Name="updateBtn" Content="Update" Click="updateBtn"/>
+                                    <Button x:Name="deleteBtn" Content="Delete" Click="deleteBtn"/>
 
                                 </StackPanel>
                             </StackPanel>

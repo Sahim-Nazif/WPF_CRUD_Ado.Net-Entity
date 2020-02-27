@@ -15,35 +15,29 @@ using System.Windows.Shapes;
 namespace WPF_CRUD_ADO.NET
 {
     /// <summary>
-    /// Interaction logic for UpageMoviePage.xaml
+    /// Interaction logic for AddMovie.xaml
     /// </summary>
-    public partial class UpageMoviePage : Window
+    public partial class AddMovie : Window
     {
         WPFDBEntities db = new WPFDBEntities();
-
-        int Id;
-        public UpageMoviePage(int movieID)
+        public AddMovie()
         {
             InitializeComponent();
-            Id = movieID;
-
         }
 
-        private void btnUpdateMovie_Click(object sender, RoutedEventArgs e)
+        private void btnAddMovie_Click(object sender, RoutedEventArgs e)
         {
-            
-            movies_table updateMovie = (from m in db.movies_table
-                                        where m.Id == Id
-                                        select m).Single();
-
-            
-
-            updateMovie.Title = txtTitle.Text;
-            updateMovie.Release_date = txtDate.SelectedDate;
-            updateMovie.Movie_genre = genreCombox.Text;
+            movies_table movies = new movies_table()
+            {
+                Title = txtTitle.Text,
+                Release_date = txtDate.SelectedDate,
+                Movie_genre = genreCombox.Text
+            };
+            db.movies_table.Add(movies);
             db.SaveChanges();
             MainWindow.datagrid.ItemsSource = db.movies_table.ToList();
             this.Hide();
+            
 
         }
     }

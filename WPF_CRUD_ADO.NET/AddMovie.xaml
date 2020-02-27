@@ -1,29 +1,29 @@
-﻿<Window x:Class="WPF_CRUD_ADO.NET.CreateUserPage"
+﻿<Window x:Class="WPF_CRUD_ADO.NET.AddMovie"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_CRUD_ADO.NET"
         mc:Ignorable="d"
-        Background="Thistle"
+          Background="Thistle"
         Title="Add Movie" Height="400" Width="450">
     <Grid>
         <Label Content="Latest Movies" HorizontalAlignment="Center" Margin="104,33" FontSize="18" FontWeight="Bold"></Label>
         <Label Content="Title" HorizontalAlignment="Left" Margin="20,100" FontSize="14"></Label>
         <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="120,-140,0,0" TextWrapping="Wrap" Height="30" Width="200"></TextBox>
         <Label Content="Rlease Date" HorizontalAlignment="Left" Margin="20,150" FontSize="14"></Label>
-        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Margin="120,-40,0,0" TextWrapping="Wrap" Height="30" Width="200"></TextBox>
+        <DatePicker x:Name="txtDate" HorizontalAlignment="Left" Margin="120,-40,0,0"  Height="30" Width="200"></DatePicker>
         <Label Content="Genre" HorizontalAlignment="Left" Margin="20,200,10,12" FontSize="14"></Label>
         <ComboBox Name="genreCombox" HorizontalAlignment="Left" Margin="120,60,0,0" Height="30" Width="200">
-        <ComboBox.Items>
-            <ComboBoxItem>Horror</ComboBoxItem>
-             <ComboBoxItem>Comedy</ComboBoxItem>
+            <ComboBox.Items>
+                <ComboBoxItem>Horror</ComboBoxItem>
+                <ComboBoxItem>Comedy</ComboBoxItem>
                 <ComboBoxItem>Action</ComboBoxItem>
                 <ComboBoxItem>Adventure</ComboBoxItem>
                 <ComboBoxItem>Thriller</ComboBoxItem>
             </ComboBox.Items>
         </ComboBox>
-        <Button Content="Add Movie" Name="btnAddMovie" HorizontalAlignment="Left" Height="30" Width="100" Margin="160,180,0,0"></Button>       
+        <Button Content="Add Movie" Name="btnAddMovie" HorizontalAlignment="Left" Height="30" Width="100" Margin="160,180,0,0" Click="btnAddMovie_Click"></Button>
 
     </Grid>
 </Window>
